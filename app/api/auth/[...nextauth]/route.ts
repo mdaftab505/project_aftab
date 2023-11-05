@@ -17,21 +17,17 @@ const handler = NextAuth({
         async session({session}) {
 
 
-            try {
+            
                 const sessionUser = await User.findOne({email: session.user.email});
     
                 session.user.id = sessionUser._id.toString();
         
                 return session;
-                
-            } catch (error) {
-                
-                console.log(error)
-            }    
+                    
             
         },
     
-        async signIn({profile})  {
+        async signIn({profile, account,user,credentials})  {
             try {
 
                 await connectToDB();
@@ -43,7 +39,8 @@ const handler = NextAuth({
                 await User.create({
                     email:profile.email, 
                     username:profile.name.replace("", "").toLowerCase(),
-                    image:profile.picture,})
+                    image:profile.picture,
+                });
               }
     
               return true;
@@ -52,7 +49,7 @@ const handler = NextAuth({
                 console.log(error);
                 return false
             }
-        }
+        },
 
     }
    
