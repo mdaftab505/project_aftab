@@ -14,7 +14,7 @@ const handler = NextAuth({
     ],
 
     callbacks:{
-        async Session({session})  {
+        async session({session})  {
 
 
             try {
