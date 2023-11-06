@@ -47,8 +47,8 @@ const handler = NextAuth({
               return true;
                 
             } catch (error) {
-                console.log(error);
-                throw new Error("Sign-in failed");
+                console.log('signin db not connect'+ error);
+                return false;
             }
         },
 
