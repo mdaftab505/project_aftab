@@ -8,11 +8,11 @@ import User from '@models/user'
 const handler = NextAuth({
     providers:[
         GoogleProvider({
-            clientId : "182149055747-5k48bb4e2ctit0k0bpgis5fk22l8ckac.apps.googleusercontent.com", 
-            clientSecret : "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",
+            clientId : process.env.GOOGLE_ID, 
+            clientSecret : process.env.GOOGLE_CLIENT_SECRET,
         })
     ],
-   
+    secret:"vT5HRYtFi6uh6Du6cpick5weXPodF5EcEb1xEinEws0=",
 
     callbacks:{
         async session({session}) {
@@ -47,8 +47,8 @@ const handler = NextAuth({
               return true;
                 
             } catch (error) {
-                console.log('signin db not connect'+ error);
-                return false;
+                console.log(error);
+                return false
             }
         },
 
