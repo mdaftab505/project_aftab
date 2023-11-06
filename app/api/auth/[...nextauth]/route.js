@@ -12,7 +12,7 @@ const handler = NextAuth({
             clientSecret : "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",
         })
     ],
-    secret:"vT5HRYtFi6uh6Du6cpick5weXPodF5EcEb1xEinEws0=",
+   
 
     callbacks:{
         async session({session}) {
