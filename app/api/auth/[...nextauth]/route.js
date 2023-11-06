@@ -48,7 +48,7 @@ const handler = NextAuth({
                 
             } catch (error) {
                 console.log(error);
-                return false;
+                throw new Error("Sign-in failed");
             }
         },
 
