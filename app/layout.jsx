@@ -13,7 +13,7 @@ export const metadata = {
 
 
 
-const RootLayout =({children}:any)=>{
+const RootLayout =({children})=>{
 
     return(
        <html lang='en'>
