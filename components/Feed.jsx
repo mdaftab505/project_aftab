@@ -1,6 +1,5 @@
 'use client'
 
-import Image from 'next/image';
 import React, { useEffect, useState } from 'react'
 import PromptCard from './PromptCard';
 import { useSession } from 'next-auth/react';

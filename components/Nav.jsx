@@ -1,6 +1,5 @@
 "use client"
 
-import User from '@models/user';
 import { signOut , signIn, useSession,getProviders } from 'next-auth/react';
 import Image from 'next/image'
 import Link from 'next/link'
@@ -166,4 +165,4 @@ const setUserProviders = async ()=>{
   )
 }
 
-export default Nav;
+export default Nav

@@ -1,11 +1,8 @@
 import Image from 'next/image'
 import React, { useState } from 'react'
-import Feed from '@components/Feed'
 
 import {usePathname, useRouter} from 'next/navigation'
 import { useSession } from 'next-auth/react'
-import Link from 'next/link'
-import User from '@models/user'
 
 
 
